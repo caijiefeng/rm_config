@@ -8,6 +8,24 @@ rm_referee:
         config: { start_position: [ 400, 700 ], size: 15, width: 2, title: "target:  " }
       - name: "exposure"
         config: { start_position: [ 400, 650 ], size: 15, width: 2, title: "exposure:" }
+      - name: "armor_ahead_left"
+        config:
+          - group_type: "polygon"
+            graph_config: { width: 2, delay: 0.5 ,color: "yellow" }
+            points:
+              - [ 875,490 ]
+              - [ 890,490 ]
+              - [ 895,510 ]
+              - [ 875,510 ]
+      - name: "armor_ahead_right"
+        config:
+          - group_type: "polygon"
+            graph_config: { width: 2, delay: 0.5 ,color: "yellow" }
+            points:
+              - [ 935,490 ]
+              - [ 950,490 ]
+              - [ 935,510 ]
+              - [ 950,510 ]
     time_change:
       - name: "capacitor"
         config: { start_position: [ 900, 100 ], size: 15, width: 2, delay: 0.5 }
@@ -24,6 +42,9 @@ rm_referee:
       - name: "mid"
         config: { type: "line", width: 2, color: "yellow",
                   start_position: [ 960, 400 ], end_position: [ 960, 540 ] }
+      - name: "armor_center"
+        config: { type: "line", width: 1, color: "yellow",
+                  start_position: [ 910, 450 ], end_position: [ 910, 510 ] }
     flash:
       - name: "spin"
         config: { start_position: [ 850, 750 ], size: 20, width: 2,
